@@ -5,10 +5,12 @@ Magicorn made Terraform Module for AWS Provider
 ```
 module "dynamodb" {
   source      = "magicorntech/dynamodb/aws"
-  version     = "0.0.1"
+  version     = "0.0.2"
   tenant      = var.tenant
   name        = var.name
   environment = "test"
+  encryption  = true # 1
+  kms_key_id  = var.dynamodb_key_id
 
   # DynamoDB Table Configuration
   table_name             = "testbucket"
@@ -18,8 +20,6 @@ module "dynamodb" {
   table_class            = "STANDARD"
   deletion_protection    = true
   point_in_time_recovery = true
-  sse_enabled            = true
-  sse_kms                = null
   ttl_enabled            = true
   ttl_attribute_name     = "expirationTime"
 
@@ -61,3 +61,6 @@ module "dynamodb" {
 }
 
 ```
+
+## Notes
+1) Works better with magicorn-aws-kms module.

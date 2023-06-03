@@ -1,6 +1,8 @@
 variable "tenant" {}
 variable "name" {}
 variable "environment" {}
+variable "encryption" {}
+variable "kms_key_id" {}
 variable "table_name" {}
 variable "hash_key" {}
 variable "range_key" {}
@@ -8,8 +10,6 @@ variable "billing_mode" {}
 variable "table_class" {}
 variable "deletion_protection" {}
 variable "point_in_time_recovery" {}
-variable "sse_enabled" {}
-variable "sse_kms" {}
 variable "ttl_enabled" {}
 variable "ttl_attribute_name" {}
 variable "attributes" {}
