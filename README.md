@@ -1,11 +1,11 @@
 # terraform-aws-dynamodb
 
-Magicorn made Terraform Module for AWS Provider
+Cloud&Cloud made Terraform Module for AWS Provider
 --
 ```
 module "dynamodb" {
-  source      = "magicorntech/dynamodb/aws"
-  version     = "0.0.2"
+  source      = "yonetimacademy/dynamodb/aws"
+  version     = "0.0.1"
   tenant      = var.tenant
   name        = var.name
   environment = "test"
@@ -63,4 +63,4 @@ module "dynamodb" {
 ```
 
 ## Notes
-1) Works better with magicorn-aws-kms module.
+1) Works better with yonetimacademy-aws-kms module.

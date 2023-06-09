@@ -1,6 +1,6 @@
 resource "aws_ssm_parameter" "name" {
   name        = "/${var.tenant}/${var.name}/${var.environment}/dynamodb/${var.table_name}/name"
-  description = "Managed by Magicorn"
+  description = "Managed by yonetimacademy"
   type        = "SecureString"
   value       = aws_dynamodb_table.main.id
 
@@ -9,7 +9,7 @@ resource "aws_ssm_parameter" "name" {
     Tenant      = var.tenant
     Project     = var.name
     Environment = var.environment
-    Maintainer  = "Magicorn"
+    Maintainer  = "yonetimacademy"
     Terraform   = "yes"
   }
 }
