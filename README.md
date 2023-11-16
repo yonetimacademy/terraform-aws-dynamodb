@@ -5,7 +5,7 @@ Cloud&Cloud made Terraform Module for AWS Provider
 ```
 module "dynamodb" {
   source      = "yonetimacademy/dynamodb/aws"
-  version     = "0.0.1"
+  version     = "0.0.2"
   tenant      = var.tenant
   name        = var.name
   environment = "test"
