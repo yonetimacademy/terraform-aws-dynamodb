@@ -1,5 +1,6 @@
 resource "aws_dynamodb_table" "main" {
-  name                        = "${var.tenant}-${var.name}-${var.table_name}-${var.environment}"
+  #name                        = "${var.tenant}-${var.name}-${var.table_name}-${var.environment}"
+  name                        = var.table_name
   hash_key                    = var.hash_key
   range_key                   = var.range_key
   billing_mode                = var.billing_mode
